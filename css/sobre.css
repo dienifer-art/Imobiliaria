@@ -1,0 +1,98 @@
+/* =====================================
+   PÁGINA SOBRE
+   (a base vem do geral.css)
+===================================== */
+
+.banner {
+    min-height: 110px;
+    padding: 190px 20px 60px;
+}
+
+/* Seções de texto */
+
+.apresentacao,
+.historia,
+.missao,
+.servicos {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 20px 10px;
+    text-align: left;
+}
+
+.apresentacao h1 {
+    margin-bottom: 15px;
+
+    font-size: 38px;
+    text-transform: uppercase;
+    color: var(--preto);
+}
+
+.historia h2,
+.missao h2,
+.servicos h2 {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+
+    font-size: 26px;
+    color: var(--preto);
+    border-bottom: 3px solid var(--dourado);
+}
+
+.apresentacao p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--preto);
+}
+
+.historia p,
+.missao p,
+.servicos p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--preto);
+}
+
+.servicos {
+    padding-bottom: 70px;
+}
+.historia,
+.missao,
+.servicos {
+    margin: 22px auto;
+    padding: 30px 35px;
+
+    background-color: var(--branco);
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(24, 35, 52, 0.08);
+
+    text-align: left;
+}
+
+.servicos {
+    padding-bottom: 30px;
+}
+
+@media (max-width: 650px) {
+
+    .banner {
+        padding: 140px 20px 40px;
+    }
+
+    .apresentacao h1 {
+        font-size: 28px;
+    }
+
+    .historia h2,
+    .missao h2,
+    .servicos h2 {
+        font-size: 22px;
+    }
+    .historia,
+.missao,
+.servicos {
+    margin: 15px;
+    padding: 24px 20px;
+}
+}

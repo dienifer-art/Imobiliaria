@@ -1,0 +1,254 @@
+/* =====================================
+   PÁGINA DE CONTATO
+   A base visual vem de geral.css
+===================================== */
+
+/* Mantém o rodapé no fim da página, mesmo quando há pouco conteúdo. */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =====================================
+   BANNER E TÍTULO
+===================================== */
+
+.banner {
+    flex: 1;
+    min-height: calc(100vh - 100px);
+    padding: 190px 24px 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.banner .titulo-contato {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 900px;
+    margin: 30px 0 30px;
+    color: var(--branco);
+    font-family: Cambria, serif;
+    font-size: clamp(28px, 3vw, 42px);
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* =====================================
+   LAYOUT DOS CARTÕES
+===================================== */
+
+.contato-layout {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: stretch;
+    gap: 28px;
+
+    width: 90%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.contato-principal,
+.endereco-card {
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 380px;
+    padding: 34px 38px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: var(--preto);
+    border: 1px solid rgba(228, 200, 153, 0.22);
+    border-radius: 28px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+/* =====================================
+   INFORMAÇÕES DE CONTATO
+===================================== */
+
+.contato-principal {
+    gap: 4px;
+}
+
+.contato-principal p {
+    position: static;
+    z-index: auto;
+    margin: 0;
+    padding: 13px 0;
+
+    color: var(--branco);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.45;
+    text-align: left;
+    text-shadow: none;
+
+    border-bottom: 1px solid rgba(228, 200, 153, 0.22);
+}
+
+.contato-principal p:last-of-type {
+    border-bottom: none;
+}
+
+.contato-principal a {
+    display: block;
+    margin-top: 4px;
+
+    color: var(--dourado);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    transition: color 0.2s ease;
+}
+.contato-principal a:hover {
+    color: var(--branco);
+    text-decoration: underline;
+}
+
+/* =====================================
+   ENDEREÇO E MAPA
+===================================== */
+
+.endereco-card {
+    justify-content: flex-start;
+}
+
+.endereco-card h2 {
+    position: static;
+    z-index: auto;
+    max-width: none;
+    margin: 0 0 20px;
+
+    color: var(--dourado);
+    font-family: Cambria, serif;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    text-shadow: none;
+}
+
+.endereco-info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 12px;
+    margin: 0 0 22px;
+}
+
+.endereco-info i {
+    flex-shrink: 0;
+    margin-top: 3px;
+
+    color: var(--dourado);
+    font-size: 19px;
+}
+.endereco-info p {
+    position: static;
+    z-index: auto;
+    margin: 0;
+
+    color: var(--branco);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.55;
+    text-align: left;
+    text-shadow: none;
+}
+
+.endereco-card iframe {
+    display: block;
+    width: 100%;
+    height: 215px;
+    border: 0;
+    border-radius: 12px;
+}
+
+/* =====================================
+   TABLETS
+===================================== */
+
+@media (max-width: 850px) {
+    .banner {
+        padding-top: 175px;
+    }
+
+    .contato-layout {
+        grid-template-columns: 1fr;
+        width: 90%;
+        max-width: 650px;
+        gap: 20px;
+    }
+
+    .contato-principal,
+    .endereco-card {
+        min-height: auto;
+    }
+}
+
+/* =====================================
+   CELULARES
+===================================== */
+
+@media (max-width: 650px) {
+    .banner {
+        min-height: calc(100vh - 100px);
+        padding: 145px 16px 45px;
+    }
+  .banner .titulo-contato {
+        margin: 20px 0 24px;
+        font-size: 27px;
+    }
+
+    .contato-layout {
+        width: 100%;
+        gap: 16px;
+    }
+
+    .contato-principal,
+    .endereco-card {
+        padding: 25px 22px;
+        border-radius: 22px;
+    }
+
+    .contato-principal p {
+        font-size: 14px;
+    }
+
+    .contato-principal a {
+        font-size: 15px;
+    }
+
+    .endereco-card h2 {
+        font-size: 23px;
+    }
+
+    .endereco-info p {
+        font-size: 14px;
+    }
+
+    .endereco-card iframe {
+        height: 200px;
+    }
+}

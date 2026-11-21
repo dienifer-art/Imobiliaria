@@ -1,0 +1,367 @@
+/* =====================================
+   PALETA DE CORES
+===================================== */
+
+:root {
+    --preto: #182334;
+    --cinza-escuro: #606873;
+    --dourado: #e4c899;
+    --cinza-claro: #8c9199;
+    --branco: #ffffff;
+    --fundo:#E0DED8;
+}
+
+/* =====================================
+   CONFIGURAÇÕES GERAIS
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fundo);
+    color: var(--preto);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =====================================
+   CABEÇALHO E MENUS
+===================================== */
+header nav a.pagina-atual {
+    color: var(--dourado);
+    border-color: var(--dourado);
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    min-height: 220px;
+
+    display: grid;
+    grid-template-columns: 1fr 195px 1fr;
+    align-items: start;
+
+    padding: 12px 5%;
+    z-index: 10;
+}
+
+.menu-esquerdo,
+.menu-direito {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    padding-top: 75px;
+}
+
+.menu-esquerdo {
+    justify-content: flex-end;
+    padding-right: 40px;
+}
+
+.menu-direito {
+    justify-content: flex-start;
+    padding-left: 40px;
+}
+
+header nav {
+    margin: 0;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+
+    list-style: none;
+    white-space: nowrap;
+}
+
+header nav a {
+    color: var(--branco);
+    font-size: 20px;
+    font-weight: 560;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    transition: 0.3s;
+    display: inline-block;
+border: 1.5px solid var(--branco);
+padding: 7px 10px;
+border-radius: 6px;
+    
+}
+
+header nav a:hover {
+    color: var(--dourado);
+}
+
+/* LOGO CENTRAL */
+
+.logo-central {
+    width: 195px;
+    height: 195px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--branco);
+    border: 2px solid var(--preto);
+    border-radius: 50%;
+
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.logo-central img {
+    width: 130%;
+    height: 120%;
+    padding: 14px;
+
+    object-fit: contain;
+    transform: translate(2%, -5%);
+}
+
+/* =====================================
+   BANNER PRINCIPAL
+===================================== */
+
+.banner {
+    position: relative;
+
+    width: 100%;
+    min-height: 600px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 150px 20px 180px;
+    overflow: hidden;
+
+    color: var(--branco);
+    background-color: var(--preto);
+}
+
+.imagem-banner {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+}
+
+/* Sobreposição escura */
+
+.banner::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        rgba(24, 35, 52, 0.78),
+        rgba(96, 104, 115, 0.75)
+    );
+
+    z-index: 1;
+}
+
+/* Logo do banner */
+
+.logo-banner {
+    position: absolute;
+    top: 15px;
+
+    width: 75px;
+    height: 75px;
+
+    object-fit: contain;
+    z-index: 2;
+}
+
+.banner h2 {
+    position: relative;
+    z-index: 2;
+
+    max-width: 750px;
+    margin-top: 65px;
+
+    font-size: 45px;
+    font-weight:bold;
+    line-height: 1.18;
+    text-transform: uppercase;
+    font-family: Cambria, serif;
+
+    color: var(--branco);
+    text-shadow: 8px 5px 7px rgba(0, 0, 0, 0.5);
+}
+
+.banner p {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 10px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+    font-size: 20.5px ;
+    font-weight: 400;
+    color: var(--branco);
+     text-shadow: 10px 7px 8px rgba(0, 0, 0, 0.842);
+}
+
+/* =====================================
+   RODAPÉ
+===================================== */
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 24px 40px;
+
+    min-height: 160px;
+    padding: 35px 7%;
+
+    background-color: var(--preto);
+    color: var(--branco);
+}
+
+footer h2 {
+    margin: 0;
+    font-size: 18px;
+    color: var(--branco);
+    text-align: left;
+}
+
+footer .rodape-nav ul {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 22px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+footer .rodape-nav a {
+    color: var(--branco);
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+footer .rodape-nav a:hover {
+    color: var(--dourado);
+}
+
+footer .direitos {
+    grid-column: 1 / -1;
+    margin: 0;
+    padding-top: 16px;
+    border-top: 1px solid rgba(228, 200, 153, 0.45);
+
+    color: var(--cinza-claro);
+    font-size: 13px;
+    text-align: center;
+}
+
+/* =====================================
+   RESPONSIVIDADE
+===================================== */
+
+/* Tablets */
+
+@media (max-width: 900px) {
+
+    header nav ul {
+        gap: 40px;
+    }
+
+    header nav a {
+        font-size: 16px;
+    }
+}
+
+/* Celulares */
+
+@media (max-width:650px) {
+    header {
+        grid-template-columns:1fr 90px 1fr;
+        padding:10px 5px;
+    }
+
+    .logo-central {
+        width:90px;
+        height:90px;
+    }
+
+    .menu-esquerdo,.menu-direito {
+        padding:38px 5px 0;
+    }
+
+    header nav ul {
+        gap:8px;
+        flex-wrap:wrap;
+    }
+
+    header nav a {
+        font-size:11px;
+    }
+
+    .banner {
+        min-height:600px;
+    }
+
+    .banner h2 {
+        font-size:29px;
+    }
+
+    .banner p {
+        font-size:14px;
+
+    }
+    .imagem-banner {
+    object-position: 55% center;
+}
+}
+@media (max-width: 650px) {
+    footer {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 28px 20px;
+    }
+
+    footer h2 {
+        text-align: center;
+    }
+
+    footer .rodape-nav ul {
+        justify-content: center;
+        gap: 14px;
+    }
+
+    footer .direitos {
+        grid-column: 1;
+    }
+}
